@@ -17,10 +17,6 @@ arm: prepare
 	cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../ \
     -DASTCENC_ISA_NEON=ON -DASTCENC_SHAREDLIB=ON  ..
 
-macOS: prepare
-	cd build && \
-	cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=../ ..
-
 install:
 	cd build && \
 	make install -j4
